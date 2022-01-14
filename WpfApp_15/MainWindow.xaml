@@ -1,0 +1,147 @@
+﻿<Window x:Class="WpfApp_15.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp_15"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="550" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <FlowDocumentScrollViewer x:Name="docViewer">
+            <FlowDocument>
+                <Paragraph>
+                    <Floater Width="250" HorizontalAlignment="Right">
+                        <BlockUIContainer>
+                             <Image Source="Data/1.jpg"/>
+                        </BlockUIContainer>
+                       
+                    </Floater>
+                    <Run Foreground="Green">Плов c уткой
+                    </Run>
+                    <Hyperlink NavigateUri="https://www.povarenok.ru/recipes/show/148926/">на сковородке</Hyperlink>
+                </Paragraph>
+                <Paragraph>
+                    <Bold>Плов</Bold>
+                    - это одно из древнейших блюд, его приготовление началось еще до нашей эры, 
+              вероятнее всего в Индии или на ближнем Востоке, с тех пор, как начали выращивать рис.
+                </Paragraph>
+                <List MarkerStyle="Box">
+                    <ListItem>
+                        <Paragraph>
+                          Калорийность готового блюда -8675.6 ккал	
+                        </Paragraph>
+                    </ListItem>
+                    <ListItem>
+                        <Paragraph>
+                              белки 341.4 г	
+                        </Paragraph>
+                    </ListItem>
+                    <ListItem>
+                        <Paragraph>
+                       углеводы 506.8 г 
+                        </Paragraph>
+                    </ListItem>
+                    <ListItem>
+                        <Paragraph>
+                          жиры 594.2 г
+                        </Paragraph>
+                    </ListItem>
+                </List>
+                <Table>
+                  <Table.Columns>
+                    <TableColumn Width="50"/>
+                    <TableColumn Width="300"/>
+                    <TableColumn Width="400"/>
+                  </Table.Columns>
+                  <TableRowGroup>
+                    <TableRow>
+                        <TableCell>
+                            <Paragraph>
+                                № этапа
+                            </Paragraph>
+                        </TableCell>
+                        <TableCell>
+                            <Paragraph>
+                                Название этапа
+                            </Paragraph>
+                        </TableCell>
+                        <TableCell>
+                            <Paragraph>
+                                Описание
+                            </Paragraph>
+                        </TableCell>
+                    </TableRow>
+                    <TableRow>
+                        <TableCell>
+                            <Paragraph>
+                                1
+                            </Paragraph>
+                        </TableCell>
+                        <TableCell>
+                            <Paragraph>
+                                Нарезаем утку кусочками
+                            </Paragraph>
+                        </TableCell>
+                        <TableCell>
+                            <Paragraph>
+                                Обжариваем утку на сильном огне пока не расплавится жир
+                            </Paragraph>
+                        </TableCell>
+                    </TableRow>
+                    <TableRow>
+                        <TableCell>
+                            <Paragraph>
+                                2
+                            </Paragraph>
+                        </TableCell>
+                        <TableCell>
+                            <Paragraph>
+                                Нарезаем лук и морковь
+                            </Paragraph>
+                        </TableCell>
+                        <TableCell>
+                            <Paragraph>
+                                Добавляем к утке соль, приправы
+                            </Paragraph>
+                        </TableCell>
+                    </TableRow>
+                    <TableRow>
+                        <TableCell>
+                            <Paragraph>
+                                3
+                            </Paragraph>
+                        </TableCell>
+                        <TableCell>
+                            <Paragraph>
+                                Добавляем к овощам промытый рис
+                            </Paragraph>
+                        </TableCell>
+                        <TableCell>
+                            <Paragraph>
+                                Далее выкладываем на утку овощи с рисом
+                            </Paragraph>
+                        </TableCell>
+                    </TableRow>
+                    </TableRowGroup>
+                </Table>
+                <BlockUIContainer>
+                    <StackPanel>
+                        <TextBlock Text="Нажми, если понравился рецепт"/>
+                        <Button Content="Нравится!"/>
+                    </StackPanel>
+                </BlockUIContainer>
+             </FlowDocument>
+         </FlowDocumentScrollViewer>
+        <StackPanel Grid.Row="1" Orientation="Horizontal">
+            <Button Content="Открыть" Width="100" Click="Button_Click_2"/>
+            <Button Content="Сохранить" Width="100" Click="Button_Click_1"/>
+            <Button Content="Очистить" Width="100" Click="Button_Click"/>
+
+        </StackPanel>
+    </Grid>
+</Window>
+
